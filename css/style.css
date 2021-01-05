@@ -1,0 +1,241 @@
+body {
+    background: #f58855;
+    font-family: "Nico Moji"; 
+    font-size: 16px;
+    font-weight: bold;
+}
+img {
+    width: 00px;
+}
+
+#title {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 40px;
+    margin: 0;
+}
+
+.card-container {
+    font-weight: bold;
+    perspective: 100px;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+}
+
+.container {
+    width: 270px;
+    margin: 20px auto;
+    margin-top: 20px;
+    
+}
+
+#stage {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    user-select: none;
+    font-size: 26px;
+    
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 80px;
+    border-radius:10px ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 5px rgba(0,0,0,0.2);
+}
+
+.card-back {
+    background: #f3f3f3;
+    color: rgb(27, 27, 27);
+}
+
+.card-front {
+    background: #f8ad8a;
+    color: #fff;
+    -webkit-transform: rotateY(180deg);
+}
+
+.card.open {
+    transform: rotateY(180deg);
+}
+
+#score {
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+    margin: 20px 5px 10px 0;
+
+}
+
+#restart {
+    text-decoration: none;
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    background: #e43131;
+    color: #fff;
+    border-radius: 20px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+    box-shadow: 0 5px rgba(0,0,0,0.2);
+}
+
+#restart.inactive {
+    cursor: default;
+    opacity: .4;
+    box-shadow: none;
+    margin-top: 20px;
+    margin-top: 20px;
+}
+
+
+#result {
+    background: #f58855;
+    background: url('');
+    position: fixed;
+    padding-top: 30px;
+    top: -50px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+} 
+
+#result__score {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+#time {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+
+#comment {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Nico Moji"; 
+    padding: 0 15px;
+    
+}
+
+#result__li {
+    list-style: none;
+    font-size: 30px;
+    color: white;
+}
+
+.bg6 {
+    
+    background: linear-gradient(45deg, rgb(241, 255, 49), rgb(54, 151, 70), rgb(39, 98, 185), rgb(105, 85, 179),rgb(214, 118, 54), rgb(233, 62, 62))!important;
+}
+
+.bg5 {
+    background: linear-gradient(45deg, rgb(241, 255, 49),rgb(214, 118, 54), rgb(252, 229, 29))!important;
+}
+
+.bg4 {
+    background: linear-gradient(to right, rgb(36, 71, 168),rgb(16, 239, 255))!important;
+}
+
+.bg3 {
+    background: linear-gradient(to right, rgb(102, 58, 151),rgb(125, 137, 172))!important;
+}
+
+.bg2 {
+    background: linear-gradient(to right, rgb(0, 0, 0),rgb(70, 54, 2))!important;
+}
+
+.bg1 {
+    background: #000 !important;
+}
+
+.fall {
+    color: snow;
+    font-size: 28px;
+    position: fixed;
+    top: -15%;
+    z-index: 2;
+    
+    
+    text-shadow:
+
+        5vw -100px 2px,
+        10vw -300px 3px,
+        20vw -340px 4px,
+       
+        42vw -310px 5px,
+        
+        63vw -150px 0,
+        73vw -250px 3px,
+        
+        86vw -320px 3px,
+        94vw -170px 3px;
+    animation: anim 9s linear infinite;
+}
+
+@keyframes anim {
+    
+    100% {
+        color: transparent;
+        top: 150%;
+        transition: .3s;
+        
+        
+    }
+}
+
+.star {
+    -webkit-animation: kirakira 8s linear;
+    color: yellow;
+    display: inline-block;
+    height: 1em;
+    line-height: 1em;
+    position: fixed;
+    top: -1em;
+    z-index: 1000;
+    opacity: .7;
+}
+
+@keyframes kirakira {
+    0% {
+        -webkit-transform:translateY(0) rotateY(0);
+    }
+    100% {
+        -webkit-transform:translateY(calc(100vh + 1em)) ;
+    }
+}
+
+
+
+
+
+
